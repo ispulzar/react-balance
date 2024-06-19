@@ -23,12 +23,16 @@ export const GlobalProvider = (props: Props) => {
   const addTransaction = (transaction) => {
     dispatch({ type: "ADD_TRANSACTION", payload: transaction });
   };
+  const deleteTransaction = (id) => {
+    dispatch({ type: "DELETE_TRANSACTION", payload: id });
+  };
 
   return (
     <Context.Provider
       value={{
         transactions: state.transactions,
         addTransaction,
+        deleteTransaction
       }}
     >
       {children}
