@@ -10,7 +10,11 @@ const TransactionForm = (props: Props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addTransaction({ id: window.crypto.randomUUID(), description, amount });
+    addTransaction({
+      id: window.crypto.randomUUID(),
+      description,
+      amount: +amount,
+    });
   };
 
   return (

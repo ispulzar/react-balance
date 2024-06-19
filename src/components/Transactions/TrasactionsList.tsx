@@ -6,6 +6,7 @@ export function TransactionsList() {
 
   return (
     <>
+      <p>Transactions</p>
       {transactions.map((transaction) => (
         <div key={transaction.id}>
           <p>{transaction.description}</p>
